@@ -51,3 +51,23 @@ $ python -u rs_2.py
 The complete results are reported in the following table.
 ##### EASER
 ![alt text](https://github.com/sisinflab/Selection-Pareto-Optimal-Solutions-IR-RS/blob/main/EASER.png?raw=true)
+
+## EASER models training
+To train the 48 EASER model configurations, we exploited an ad-hoc version of [Elliot](https://elliot.readthedocs.io/en/latest/), which is an open-source recommendation framework. Please, refer to the official documentation of Elliot for more details about the framework. You can download it at this [link](https://drive.google.com/file/d/13a35C1CxXd4jx8oWvYfpvbxX6jJ2h67s/view?usp=sharing). In the folder`config_files`, you can find the configuration files used to train the models.
+To run these codes, make sure to have a Python `3.8.0` or later version installed on your device. Firstly, download the zip file from the link provided before. Then, unzip the file. In the project's folder,  you may create the virtual environment with the requirements files we included as follows:
+
+```
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install --upgrade pip
+$ pip install -r requirements.txt
+```
+
+To train the models, run the following commands:
+
+```
+$ python -u start_experiments.py
+```
+
+You will find the results in the folder `results` for each dataset.
+
