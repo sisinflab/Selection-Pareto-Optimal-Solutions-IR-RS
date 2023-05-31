@@ -9,7 +9,7 @@ def choice(x, min):
 
 
 if __name__ == '__main__':
-    model = pd.read_csv('data/trees_new.tsv', sep='\t')    #  for NN: data/nn.tsv
+    model = pd.read_csv('data/trees.tsv', sep='\t')    #  for NN: data/nn.tsv
     obj1 = 'nDCG'
     obj2 = 'time'
     obj3 = ''

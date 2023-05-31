@@ -29,5 +29,5 @@ manager = []
 for i in range (0, len(files)):
     df = pd.read_csv(files[i], sep='\t')
     manager.append([files[i].split('/')[2].split('_')[0] + '_' + files[i].split('/')[2].split('_')[1], df['nDCG'].mean(), df['time'].sum() / df['docs_per_query'].sum(), df['energy'].sum() / df['docs_per_query'].sum()])
-pd.DataFrame(manager, columns=['model', 'nDCG', 'time', 'energy']).to_csv('data/trees_new.tsv', sep='\t', index=False)
+pd.DataFrame(manager, columns=['model', 'nDCG', 'time', 'energy']).to_csv('data/trees.tsv', sep='\t', index=False)
 
