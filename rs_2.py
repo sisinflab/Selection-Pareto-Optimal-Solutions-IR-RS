@@ -37,14 +37,6 @@ if __name__ == '__main__':
              knee_point[['model', 'utility_based']], euclidean_distance[['model', 'euclidean_distance']],
              weighted_mean[['model', 'weighted_mean']]]
     df = reduce(lambda df1, df2: pd.merge(df1, df2, on='model'), dfList)
-    #df['Recall'] = df['Recall'].apply(lambda x: round(x, 4))
-    #df['APLT'] = df['APLT'].apply(lambda x: round(x, 4))
-    #df['pdu'] = df['pdu'].apply(lambda x: round(x, 4))
-    #df['c_pdu'] = df['c_pdu'].apply(lambda x: round(x, 4))
-    # df['hypervolume'] = df['hypervolume'] * 10e-1
-    #df['hypervolume'] = df['hypervolume'].apply(lambda x: round(x, 5))
-    #df['euclidean_distance'] = df['euclidean_distance'].apply(lambda x: round(x, 4))
-    #df['weighted_mean'] = df['weighted_mean'].apply(lambda x: round(x, 4))
 
     df['choicepdu'] = df['pdu'].map(lambda x: choice(x, df['pdu'].min()))
     df['choicecpdu'] = df['c_pdu'].map(lambda x: choice(x, df['c_pdu'].min()))

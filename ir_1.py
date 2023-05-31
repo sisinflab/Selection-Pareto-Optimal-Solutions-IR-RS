@@ -15,7 +15,7 @@ if __name__ == '__main__':
     obj3 = ''
     population = 6306
     utopia_point = np.array([1, 0])
-    reference_point = np.array([0.5, 0.00002])     #  for NN: [0.5, 0.00002]
+    reference_point = np.array([0.5, 0.00002])
     weights = np.array([0.5, 0.5])
     scale = False
     calibration = False

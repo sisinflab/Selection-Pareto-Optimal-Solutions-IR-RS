@@ -35,6 +35,7 @@ if __name__ == '__main__':
                   weighted_mean[['model', 'weighted_mean']]]
     df = reduce(lambda df1, df2: pd.merge(df1, df2, on='model'), dfList)
     print(df.sort_values(by=obj1).to_latex(index=False))
+
     df['choicepdu'] = df['pdu'].map(lambda x: choice(x, df['pdu'].min()))
     df['choicehv'] = df['hypervolume'].map(lambda x: choice(x, df['hypervolume'].max()))
     df['choiceub'] = df['utility_based'].map(lambda x: choice(x, df['utility_based'].max()))
