@@ -113,8 +113,8 @@ class ObjectivesSpace:
         columns.append('weighted_mean')
         return pd.DataFrame(np.column_stack((wm_points, sum)), columns=columns)
 
-    def _compute_distances(self, model, up, scale, calibration):
-        relative_path = '../data/population'
+    def _compute_distances(self, model, up, scale, calibration, dataset):
+        relative_path = f'data/population/{dataset}'
         dir = os.listdir(relative_path)
         for el in dir:
             if model in el:
@@ -141,9 +141,14 @@ class ObjectivesSpace:
         standard_deviation = variance ** (1 / 2)
         return standard_deviation, mean
 
-    def pdu(self, up, scale=False, calibration=False):
+    def pdu(self, up, dataset, scale=False, calibration=False):
         not_dominated = pd.DataFrame(self.points[0], columns=self._constr_obj())
-        not_dominated['pdu'] = not_dominated['model'].map(lambda x: self._compute_distances(x, up, scale, calibration))
+        if calibration:
+            not_dominated['c_pdu'] = not_dominated['model'].map(
+                lambda x: self._compute_distances(x, up, scale, calibration, dataset))
+        else:
+            not_dominated['pdu'] = not_dominated['model'].map(
+                lambda x: self._compute_distances(x, up, scale, calibration, dataset))
         return not_dominated
 
 
