@@ -32,3 +32,22 @@ $ python -u ir_1.py
 $ python -u ir_2.py
 ```
 The complete results are reported in the following tables.
+##### LambdaMART
+![alt text](https://github.com/sisinflab/Selection-Pareto-Optimal-Solutions-IR-RS/blob/main/LambdaMART.png?raw=true)
+
+##### Neural Networks
+![alt text](https://github.com/sisinflab/Selection-Pareto-Optimal-Solutions-IR-RS/blob/main/NeuralNetworks.png?raw=true)
+
+### RS Scenario
+Here, we explain how to reproduce the results regarding the Recommender Systems scenario. 
+- The script `rs_1.py` reproduces the results concerning the Goodreads dataset. To run it, you should run the following command:
+```
+$ python -u rs_1.py
+```
+- The script `rs_2.py` reproduces the results concerning the Amazon Music dataset. To run it, you should run the following command:
+```
+$ python -u rs_2.py
+```
+The complete results are reported in the following table.
+##### EASER
+![alt text](https://github.com/sisinflab/Selection-Pareto-Optimal-Solutions-IR-RS/blob/main/EASER.png?raw=true)
