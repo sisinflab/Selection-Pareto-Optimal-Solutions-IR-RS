@@ -70,4 +70,6 @@ $ python -u start_experiments.py
 ```
 
 You will find the results in the folder `results` for each dataset.
+## IR models
+We provide the already trained versions of the [LambdaMART](https://drive.google.com/file/d/1RxYfyj_q96_mD1rOiFJwDBwTs4zP1Tef/view?usp=sharing) and [Neural Networks](https://drive.google.com/file/d/1V5JRN9oBWLL_XoIb2AmQHdGIl7oCn6m1/view?usp=sharing) models.
 
